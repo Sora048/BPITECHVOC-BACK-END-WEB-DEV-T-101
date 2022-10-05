@@ -1,0 +1,33 @@
+body {
+    background-color: blanchedalmond;
+    font-size: 21px;
+    font-family: 'Courier New';
+}
+
+a {
+    text-decoration: none;
+    color: #111;
+}
+header {
+    background-color: #7f7d7d83;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+img {
+    justify-content: center;
+}
+
+.go-back {
+    text-decoration: underline;
+}
