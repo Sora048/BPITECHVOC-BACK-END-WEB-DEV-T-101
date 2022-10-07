@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Tweets</title>
+</head>
+<body>
+    <h1>Make a new Tweet</h1>
+
+    <form action="/tweets" method="post">
+        <section>
+            <label for="username">Enter Your Username:</label><br>
+            <input type="text" name="username" id="username" placeholder="username">
+        </section>
+        <br>
+        <section>
+            <label for="tweet">Enter Your Tweet:</label><br>
+            <textarea cols="30" rows="5" name="tweet" id="tweet" placeholder="Tweet now..."></textarea>
+        </section>
+        <button type="submit">Submit</button>
+    </form>
+    <a href="/tweets">View Tweets</a>
+</body>
+</html>
