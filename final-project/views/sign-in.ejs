@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-In Page</title>
+
+    <link rel="stylesheet" href="/bootstrap/bootstrap.min.css">
+    <script src="/bootstrap/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand welcome" href="/">Sign-Up Page</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <hr>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/sign-up">Sign-Up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <form action="/user" method="post" class="position-absolute top-50 start-50 translate-middle sign-in">
+        <div class="md-3 cols form-content">
+            <label for="username" class="form-label">Input your Username</label>
+            <div class="col-sm-10">
+                <input class="form-control" type="text" name="username" id="username" placeholder="Username">
+            </div>
+                <br>
+            <label for="pwd" class="form-label">Input your Password</label>
+            <div class="col-sm-10">
+                <input class="form-control" type="password" name="pwd" id="pwd">
+            </div>
+                <br>
+            <button type="submit" class="btn btn-primary mb-3">Sign In</button>
+        </div>
+    </form>
+</body>
+</html>

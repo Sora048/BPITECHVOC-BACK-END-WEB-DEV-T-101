@@ -1,0 +1,9 @@
+//Installation:
+
+npm i express ejs express-session body-parser cookie-parser msql express-mysql-session dotenv
+
+
+//Database Mysql
+
+1.Install XAMPP
+2. Import "final-project-back-end.sql" on localhost/phpmyadmin

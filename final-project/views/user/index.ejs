@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" href="/bootstrap/bootstrap.min.css">
+    <script src="/bootstrap/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand welcome" href="/">Welcome <%= userData.userName %></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <hr>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <form action="/logout" method="post">
+                            <button class="nav-link log-out" >LOG OUT</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> 
+    <h4>
+        <p>
+            <strong>Name: </strong><%= userData.userFn.toUpperCase()%> <%=userData.userMn.toUpperCase()%> <%=userData.userLn.toUpperCase()%> <%=userData.userSuffix.toUpperCase()%>
+            <a title="Edit User" class='far fa-edit'  href="/user/<%= userData.userID %>/edit"></a>
+            <br>
+        </p>
+        <p>
+            <strong>Address: </strong><%=userData.userAddress.toUpperCase()%><br>
+        </p>
+        <p>
+            <strong>Short Description:</strong><br>
+            <%=userData.userText.toUpperCase()%>
+        </p>
+    </h4>
+    <h3>My Location</h3>
+    <div id="map"></div>
+
+    <script>
+        function initMap(){
+            var options = {
+                zoom: 8,
+                center: {lat:12.8797, lng:-121.7740}
+            }
+
+            var map = new google.maps.Map(document.getElementById('map'), options);
+
+            var marker = new google.maps.Marker({
+                position:{lat:16.1885, lng:-119.8584},
+                map:map
+            })
+        }
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly">
+    </script>
+</body>
+</html>

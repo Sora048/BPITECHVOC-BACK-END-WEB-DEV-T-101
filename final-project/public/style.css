@@ -1,0 +1,144 @@
+@font-face {
+    font-family: solstice;
+    src: url(fonts/THE\ SOLSTICE.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    font-size: 1.2rem;
+    font-family: 'Courier New';
+}
+
+a {
+    text-decoration: none;
+    color: #111;
+}
+
+.welcome {
+
+    font-family: solstice;
+    color: #4141ff;
+    text-align: center;
+    /* color: #f8f9fa; */
+}
+.welcome:hover{
+    color: #4141ff;   
+}
+
+.nav-link {
+    text-transform: uppercase;
+    text-align: center;
+}
+.nav-link:hover {
+    font-weight: 800;
+    color: #4141ff;
+    background-color: #dee2e6;
+}
+
+.navbar-toggler{
+    border: #111 1px solid;
+    width: 100%;
+}
+.log-out {
+    border: solid #ee0000 1px;
+    border-radius: 50px;
+    color: #ff3535;
+}
+.log-out:hover{
+    border: solid #ff0606 2px;
+    text-shadow: #8f0000;
+    color: #ee0000;
+    font-weight: 900;
+    font-size: large;
+    background-color: #ffc5c5;
+    opacity: 0.7;
+}
+
+.sign-up, .sign-in {
+    width: max-content;
+    border-left: 1px #111 solid;
+    border-right: 1px #111 solid;
+    border-bottom: 1px #111 solid;
+    /* border-radius: 15px; */
+    margin: 0 auto;
+    padding: 1.35em 1em 1em 1em;
+}
+.sign-in {
+    border-top: 1px #111 solid;;
+}
+.col-sm-10{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.fa-edit{
+    cursor: pointer;
+}
+
+.go-back {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+table {
+    justify-content: center;
+}
+
+.delete{
+    padding: .2em;
+    text-align: center;
+    outline: none;
+    border: 1px solid #8f0000;
+    border-radius: 10px;
+    background-color: transparent;
+}
+.delete:hover{
+    color: red;
+    background-color: #ff7878;
+    opacity: 0.8;
+}
+
+#map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+  }
+
+@media (min-width: 600px) {
+    
+    .container-fluid {
+        display: block;
+    }
+    .navbar-toggler {
+        width: auto;
+    }
+}
+
+
+@media (min-width: 1000px) {
+    body {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .container-fluid{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    .navbar-toggler{
+        justify-items: flex-end;
+    }
+    .navbar-nav{
+        margin-left: auto;
+    }
+    .nav-link {
+        margin-left: 1em;
+    }
+}

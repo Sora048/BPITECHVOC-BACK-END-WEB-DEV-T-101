@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" href="/bootstrap/bootstrap.min.css">
+    <script src="/bootstrap/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand welcome" href="/">Editing...</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <hr>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <form action="/logout" method="post">
+                            <button class="nav-link log-out" >LOG OUT</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> 
+
+    <form action="/user/<%= userData.userID %>" method="post" class="sign-up">
+        <div class="md-3 cols form-content">
+            <label for="username" class="form-label">Input a Username:</label>
+            <div class="col-sm-10">
+                <input class="form-control" type="text" name="username" id="username" value="<%= userData.userName %>"  placeholder="Username" required>
+            </div>
+                <br>
+            <label for="pwd" class="form-label">Input a Password:</label>
+            <div class="col-sm-10">
+                <input class="form-control" type="password" name="pwd" id="pwd" value="<%= userData.userPwd %>" placeholder="*" required>
+            </div>
+                <br>
+            
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <label for="fname" class="form-label">First Name:</label>
+                    <input class="form-control" type="text" name="fname" id="fname" value="<%= userData.userFn %>" placeholder="Given Name" required>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <label for="mname" class="form-label">Middle Initial:</label>
+                    <input class="form-control" type="text" name="mname" id="mname" value="<%= userData.userMn %>" placeholder="(optional)">
+                </div>
+                <div class="col-md-6 mb-4">
+                    <label for="lname" class="form-label">Last Name:</label>
+                    <input class="form-control" type="text" name="lname" id="lname" value="<%= userData.userLn %>" placeholder="Surname" required>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <label for="suffix" class="form-label">Suffix</label>
+                    <input class="form-control" type="text" name="suffix" id="suffix" value="<%= userData.userSuffix %>" placeholder="if necessary">
+                </div>
+            </div>
+
+            <div class="col-sm-10">
+                <label for="address" class="form-label">Address:</label>
+                <input class="form-control" type="text" name="address" id="address" value="<%= userData.userAddress %>" placeholder="Address" required>
+            </div>
+                <br>
+
+            <div class="col-sm-10">
+                <label for="description" class="form-label">Short Description:</label>
+                <textarea class="form-control" type="text" name="description" id="description" maxlength="250" required><%= userData.userText %></textarea>
+            </div>
+                
+                <br>
+            
+                <br>
+            <button type="submit" class="btn btn-primary mb-3">Change</button>
+        </div>
+    </form>
+    
+</body>
+</html>
